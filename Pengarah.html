@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+    <script>
+        // Fungsi untuk mendeteksi jenis perangkat
+        function detectDevice() {
+            // Mendapatkan informasi user agent
+            var userAgent = navigator.userAgent;
+
+            // Mengecek apakah user agent mengandung kata 'Mobile'
+            if (/Mobi|Android/i.test(userAgent)) {
+                // Jika iya, pengguna menggunakan perangkat mobile
+                window.location.href = 'mobile.wesbite.html';
+            } else {
+                // Jika tidak, pengguna menggunakan perangkat laptop atau desktop
+                window.location.href = 'landingpage.html';
+            }
+        }
+    </script>
+</head>
+<body onload="detectDevice()">
+    <!-- Konten halaman ini dapat ditampilkan jika redirect memerlukan penanganan tambahan -->
+    <h1>Sedang mengarahkan...</h1>
+</body>
+</html>
